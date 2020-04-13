@@ -1,0 +1,24 @@
+<section id="aside">
+  <section class="sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <ul class="sidebar-nav social-media-list">
+      {%- if site.social.github -%}
+      <li>
+        <a target="_blank" class="sidebar-nav-item" rel="me" href="https://github.com/{{ site.social.github }}" title="{{ site.social.github }}">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      </li>
+      {%- endif -%}
+    </ul>
+
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </section>
+</section>
