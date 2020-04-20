@@ -10,11 +10,14 @@
     </div>
 
     <ul class="sidebar-nav social-media-list">
-      {%- if site.social.github -%}
+      {%- if site.data.social.github -%}
       <li>
-        <a target="_blank" class="sidebar-nav-item" rel="me" href="https://github.com/{{ site.social.github }}" title="{{ site.social.github }}">
-          <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
+        <a target="_blank" class="sidebar-nav-item" rel="me" href="https://github.com/{{ site.data.social.github }}" title="{{ site.data.social.github }}"><i class="fa fa-github" aria-hidden="true"></i></a>
+      </li>
+      {%- endif -%}
+      {%- if site.data.social.linkedin -%}
+      <li>
+        <a target="_blank" class="sidebar-nav-item" rel="me" href="https://www.linkedin.com/in/{{ site.data.social.linkedin }}" title="{{ site.data.social.linkedin }}" data-proofer-ignore><i class="fa fa-linkedin" aria-hidden="true"></i></a>
       </li>
       {%- endif -%}
     </ul>

@@ -1,0 +1,66 @@
+#projects {
+    .card {
+        margin: 10px 0;
+        padding: 0 2.25rem;
+        height: 15.75rem;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        border: none !important;
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .card-title {
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .card-subtitle {
+                color: rgba($color: #000000, $alpha: 0.55);
+                font-size: 14px;
+                font-style: italic;
+            }
+
+            p {
+                color: rgba($color: #000000, $alpha: 0.75);
+                font-size: 16px;
+                margin-top: 0.625rem;
+            }
+            
+            a {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                color: #0e4598;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 48em) {
+    #projects {
+        .card {
+            height: 17.75rem;
+            padding: 1.25rem 0;
+        }
+    }
+}
+
+@media screen and (min-width: 58em) {
+    #projects {
+        .card {
+            height: 16.75rem;
+        }
+    }
+}
+
+@media screen and (min-width: 68em) {
+    #projects {
+        .card {
+            padding: 1.25rem;
+
+            .card-title {
+                font-size: 20px;
+            }
+        }
+    }
+}

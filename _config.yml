@@ -2,18 +2,17 @@ title: Alejandro González Rodríguez
 email: alejandrogonzalr@gmail.com
 description: >- 
  Software developer focussed on DevOps principles and culture, 
- interested in reliable software and human factors.
+ interested in reliable software.
 baseurl: ""
 url: "https://alejandrogonzalr.github.io/"
-
-social:
-    twitter: AlGonzalR
-    github:  AlejandroGonzalR
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-autoprefixer
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 sass:
   sass_dir: _sass
