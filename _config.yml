@@ -3,8 +3,8 @@ email: alejandrogonzalr@gmail.com
 description: >- 
  Software developer focussed on DevOps principles and culture, 
  interested in reliable software.
-baseurl: ""
-url: "https://alejandrogonzalr.github.io/"
+baseurl: "http://alejandrogonzalr.codes/"
+url: "http://alejandrogonzalr.codes/"
 
 # Build settings
 theme: minima
