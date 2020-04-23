@@ -23,7 +23,7 @@
 
             p {
                 color: rgba($color: #000000, $alpha: 0.75);
-                font-size: 16px;
+                // font-size: 16px;
                 margin-top: 0.625rem;
             }
             
@@ -44,7 +44,6 @@
         }
     }
 }
-
 @media screen and (min-width: 58em) {
     #projects {
         .card {
@@ -52,7 +51,6 @@
         }
     }
 }
-
 @media screen and (min-width: 68em) {
     #projects {
         .card {

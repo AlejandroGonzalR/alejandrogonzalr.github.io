@@ -1,8 +1,12 @@
 (function () {
     axios
-        .get('https://api.github.com/users/alejandrogonzalr/repos')
+        .get('https://api.github.com/users/alejandrogonzalr/repos', {
+            params: {
+                sort: 'pushed'
+            }
+          })
         .then(response => {
-            // console.log(response.data);
+            console.log(response.data);
             appendProjects(response.data);
         })
         .catch(err => {
@@ -12,8 +16,6 @@
 
 function appendProjects(projects) {
     const projectsArea = document.getElementById('projects');
-
-    projects.sort(sortByDate);
 
     projects.forEach(project => {
         if (!project.fork && project.name !== 'alejandrogonzalr.github.io') {
@@ -45,8 +47,4 @@ function normalizeName(name) {
     });
 
     return name;
-}
-
-function sortByDate(a, b) {
-    return new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime();
 }

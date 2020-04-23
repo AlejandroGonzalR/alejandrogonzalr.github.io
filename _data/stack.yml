@@ -1,0 +1,23 @@
+- title: Frontend
+  technologies:
+    - title: HTML5
+    - title: CSS3
+    - title: JavaScript (ES6+)
+- title: Backend
+  technologies:
+    - title: Node.js
+    - title: Express
+    - title: Java
+    - title: Golang
+    - title: MySQL
+    - title: PostgreSQL
+    - title: MongoDB
+    - title: Neo4j
+- title: Devops    
+  technologies:
+    - title: Git
+    - title: Jenkins
+    - title: Docker
+    - title: Kubernetes
+    - title: Ansible
+    - title: Docker Swarm

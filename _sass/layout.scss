@@ -16,6 +16,10 @@ body {
       -ms-text-size-adjust: 100%;
 }
 
+p {
+  font-size: 16px;
+}
+
 hr.separator {
   border: 0;
   width: 1.625rem;
@@ -24,11 +28,17 @@ hr.separator {
   background-image: linear-gradient(90deg, rgba(29, 38, 113, 0.8), #0e4598);
 }
 
+svg {
+  bottom: 0;
+  width: 100%;
+  height: 10px; // 10vw;
+  /* set height to pixels if you want angle to change with screen width */
+}
+
 #aside {
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
-  // background-color: #0e4598;
+  color: rgba($color: #fff, $alpha: 0.5);
   background: linear-gradient(rgba(29, 38, 113, 0.8), #0e4598), url("/assets/images/sidebar-background.png");
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 16px rgba(0,0,0,0.63);
 
@@ -74,8 +84,6 @@ hr.separator {
   background-color: #efefef;
   padding: 4rem 2rem;
 }
-
-/*** MEDIA QUERIES ***/
 
 @media screen and (min-width: 38em) {
   html {
