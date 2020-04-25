@@ -7,9 +7,9 @@
 }
 
 body {
-  color: #515151;
-  background-color: #fff;
-  font-family: 'Source Sans Pro', sans-serif !important;
+  color: $primary-color;
+  background-color: $primary-background !important;
+  font-family: $main-font !important;
   font-size: 16px;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -25,21 +25,14 @@ hr.separator {
   width: 1.625rem;
   height: 2px;
   margin: 15px auto 25px;
-  background-image: linear-gradient(90deg, rgba(29, 38, 113, 0.8), #0e4598);
-}
-
-svg {
-  bottom: 0;
-  width: 100%;
-  height: 10px; // 10vw;
-  /* set height to pixels if you want angle to change with screen width */
+  background-image: linear-gradient(90deg, $complementary-blue, $main-blue);
 }
 
 #aside {
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba($color: #fff, $alpha: 0.5);
-  background: linear-gradient(rgba(29, 38, 113, 0.8), #0e4598), url("/assets/images/sidebar-background.png");
+  color: $primary-light-color;
+  background: linear-gradient($complementary-blue, $main-blue), url("/assets/images/sidebar-background.png");
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 16px rgba(0,0,0,0.63);
 
   a {
@@ -56,7 +49,7 @@ svg {
     .sidebar-about h1 {
       color: #fff;
       margin-top: 0;
-      font-family: 'Montserrat', sans-serif;
+      font-family: $secondary-font;
       font-size: 2.625rem;
     }
 
@@ -80,9 +73,22 @@ svg {
   font-weight: 300;
 }
 
-.content {
-  background-color: #efefef;
+%content {
   padding: 4rem 2rem;
+}
+
+svg {
+  width: 100%;
+  height: 10vw;
+}
+
+#techs-area {
+  @extend %content;
+  background-color: #fff;
+}
+
+#projects-area {
+  @extend %content;
 }
 
 @media screen and (min-width: 38em) {
@@ -105,9 +111,13 @@ svg {
     text-align: left;
   }
 
-  .content {
+  %content {
     margin-left: 33.3%;
     padding: 4rem;
+  }
+
+  svg {
+    margin-left: 33.3%;
   }
 }
 

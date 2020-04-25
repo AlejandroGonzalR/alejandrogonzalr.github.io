@@ -12,7 +12,7 @@
             justify-content: center;
 
             .card-title {
-                font-family: 'Montserrat', sans-serif;
+                font-family: $secondary-font;
             }
 
             .card-subtitle {
@@ -23,14 +23,13 @@
 
             p {
                 color: rgba($color: #000000, $alpha: 0.75);
-                // font-size: 16px;
                 margin-top: 0.625rem;
             }
             
             a {
-                font-family: 'Montserrat', sans-serif;
+                font-family: $secondary-font;
                 font-size: 14px;
-                color: #0e4598;
+                color: $main-blue;
             }
         }
     }
