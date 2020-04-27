@@ -1,23 +1,40 @@
 - title: Frontend
   technologies:
     - title: HTML5
+      image: /assets/images/logos/Html.svg
     - title: CSS3
+      image: /assets/images/logos/Css.svg
     - title: JavaScript (ES6+)
+      image: /assets/images/logos/Javascript.svg
 - title: Backend
   technologies:
     - title: Node.js
-    - title: Express
+      image: /assets/images/logos/NodeJs.svg
+    # - title: Express
+    #  image: /assets/images/logos/Jenkins.svg
     - title: Java
+      image: /assets/images/logos/Java.svg
     - title: Golang
+      image: /assets/images/logos/Go.svg
     - title: MySQL
+      image: /assets/images/logos/Mysql.svg
     - title: PostgreSQL
+      image: /assets/images/logos/Postgresql.svg
     - title: MongoDB
-    - title: Neo4j
+      image: /assets/images/logos/Mongodb.svg
+    # - title: Neo4j
+    #  image: /assets/images/logos/Jenkins.svg
 - title: Devops    
   technologies:
     - title: Git
+      image: /assets/images/logos/Git.svg
     - title: Jenkins
+      image: /assets/images/logos/Jenkins.svg
     - title: Docker
+      image: /assets/images/logos/Docker.svg
     - title: Kubernetes
+      image: /assets/images/logos/Kubernetes.svg
     - title: Ansible
-    - title: Docker Swarm
+      image: /assets/images/logos/Ansible.svg
+    # - title: Docker Swarm
+    #  image: /assets/images/logos/Jenkins.svg
