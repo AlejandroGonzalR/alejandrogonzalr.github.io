@@ -1,4 +1,4 @@
-<section id="aside">
+<section id="sidebar">
   <section class="sidebar-sticky">
     <div class="sidebar-about">
       <h1>
@@ -12,17 +12,20 @@
     <ul class="sidebar-nav social-media-list">
       {%- if site.data.social.github -%}
       <li>
-        <a target="_blank" class="sidebar-nav-item" rel="me" href="https://github.com/{{ site.data.social.github }}" title="{{ site.data.social.github }}"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a target="_blank" class="sidebar-nav-item" rel="me" href="https://github.com/{{ site.data.social.github }}" title="{{ site.data.social.github }}"><i class="fab fa-github" aria-hidden="true"></i></a>
       </li>
       {%- endif -%}
       {%- if site.data.social.linkedin -%}
       <li>
-        <a target="_blank" class="sidebar-nav-item" rel="me" href="https://www.linkedin.com/in/{{ site.data.social.linkedin }}" title="{{ site.data.social.linkedin }}" data-proofer-ignore><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a target="_blank" class="sidebar-nav-item" rel="me" href="https://www.linkedin.com/in/{{ site.data.social.linkedin }}" title="{{ site.data.social.linkedin }}" data-proofer-ignore><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+      </li>
+      {%- endif -%}
+      {%- if site.data.social.email -%}
+      <li>
+        <a target="_blank" class="sidebar-nav-item" rel="me" href="mailto:{{ site.data.social.email }}" title="{{ site.data.social.email }}"><i class="far fa-envelope" aria-hidden="true"></i></a>
       </li>
       {%- endif -%}
     </ul>
-
-    <i class="fab fa-node-js"></i>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </section>

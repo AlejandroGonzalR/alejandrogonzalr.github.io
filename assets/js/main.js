@@ -16,13 +16,14 @@
 
 function appendProjects(projects) {
     const projectsArea = document.getElementById('projects');
+    let renderedProject = 0;
 
     projects.forEach(project => {
-        if (!project.fork && project.name !== 'alejandrogonzalr.github.io') {
+        if (!project.fork && project.name !== 'alejandrogonzalr.github.io' && renderedProject < 10) {
             const content = `
-            <div class="col-sm-12 col-md-6 col-xl-6">
-                <div class="card text-center">
-                    <div class="card-body">
+            <div class="column is-half-desktop">
+                <div class="card has-text-centered">
+                    <div class="card-content">
                         <h5 class="card-title">${normalizeName(project.name)}</h5>
                         <h6 class="card-subtitle">${project.language}</h6>
                         <p>${project.description}</p>
@@ -33,6 +34,7 @@ function appendProjects(projects) {
             `;
     
             projectsArea.innerHTML += content;
+            renderedProject++;
         }
     });
 }

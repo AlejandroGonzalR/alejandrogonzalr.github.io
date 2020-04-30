@@ -12,8 +12,6 @@ body {
   font-family: $main-font !important;
   font-size: 16px;
   line-height: 1.5;
-  max-width: 100%;
-  // overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -30,15 +28,17 @@ hr.separator {
   background-image: linear-gradient(90deg, $complementary-blue, $main-blue);
 }
 
-#aside {
+#sidebar {
   text-align: center;
   padding: 2rem 1rem;
   color: $primary-light-color;
   background: linear-gradient($complementary-blue, $main-blue), url("/assets/images/sidebar-background.png");
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 16px rgba(0,0,0,0.63);
+  z-index: 1;
 
   a {
     color: #fff;
+    font-weight: 600;
   }
 
   .sidebar-sticky {
@@ -52,7 +52,7 @@ hr.separator {
       color: #fff;
       margin-top: 0;
       font-family: $secondary-font;
-      font-size: 2.625rem;
+      font-size: 1.625rem;
     }
 
     .sidebar-nav {
@@ -62,36 +62,84 @@ hr.separator {
       margin-bottom: 1rem;
       list-style: none;
 
-      .sidebar-nav-item > i {
-        font-size: 32px;
+      .sidebar-nav-item {
+        font-size: 24px;
         margin: auto 0.625rem;
+
+        svg {
+          margin: 0;
+        }
       }
     }
+  }
+}
+
+%content {
+  padding: 4rem 2rem;
+
+  h5, p, hr {
+    position: relative;
   }
 }
 
 .lead {
   font-size: 1rem !important;
   font-weight: 300;
+  margin-bottom: 15px;
 }
 
-.tech-logo {
-  height: 3.75rem;
-  margin: 0.9375rem;
+.section-title {
+  font-family: $secondary-font !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-%content {
-  padding: 4rem 2rem;
-}
-
-svg {
+.section-divider {
+  position: absolute;
   width: 100%;
-  height: 10vw;
+  height: 150%;
+  top: 85rem;
+  left: 0;
+  right: 0;
+  transform: skewY(-10deg);
+  background-color: $primary-background;
 }
 
-#techs-area {
+#skills {
   @extend %content;
   background-color: #fff;
+
+  .box {
+    padding: 0;
+    border-radius: 13px;
+    overflow: hidden;
+    border: 1px solid $light-border-color;
+
+    .column {
+      padding: 3rem 2.25rem;
+      border-bottom: 1px solid $light-border-color;
+
+      h5 {
+        font-family: $secondary-font;
+      }
+
+      svg {
+        color: $main-blue;
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .column:last-child {
+      border-bottom: none;
+    }
+  }
+
+  ul {
+    margin-left: 0;
+    list-style: none;
+  }
 }
 
 #projects-area {
@@ -102,6 +150,12 @@ svg {
   html {
     font-size: 20px;
   }
+
+  .sidebar-sticky {
+    .sidebar-about h1 {
+      font-size: 2.625rem;
+    }
+  }
 }
 
 @media screen and (min-width: 48em) {
@@ -109,7 +163,7 @@ svg {
     font-size: 16px;
   }
 
-  #aside {
+  #sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -123,15 +177,28 @@ svg {
     padding: 4rem;
   }
 
-  svg {
-    margin-left: 33.3%;
+  #skills {
+    .box {
+      .column {
+        border-right: 1px solid $light-border-color;
+      }
+
+      .column:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .section-divider {
+    left: 33.3%;
     width: 66.7%;
+    top: 55rem;
   }
 }
 
 @media screen and (min-width: 58em) {
-  .sidebar-about h1 {
-    font-size: 2rem;
+  .section-divider {
+    top: 28rem;
   }
 
   html {
