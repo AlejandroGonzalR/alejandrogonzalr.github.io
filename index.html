@@ -33,11 +33,24 @@ title: Home
         <div class="section-divider"></div>
     </section>
 
-    <hr>
+    <section id="resume-area">
+        <h5 class="section-title">Work experience & education</h5>
+        <p>Take a look for more information about me.</p>
+        <hr class="separator">
+        <a href="https://github.com/{{ site.data.social.github }}?tab=repositories" title="{{ site.data.social.github }}" class="button">
+            Download resume
+        </a>
+        <!-- <hr> -->
+    </section>
 
     <section id="projects-area">
         <h5 class="section-title">Some Projects</h5>
         <hr class="separator">
         <div id="projects" class="columns is-multiline is-desktop"></div>
+        <a href="https://github.com/{{ site.data.social.github }}?tab=repositories" title="{{ site.data.social.github }}" class="button">
+            View more projects
+        </a>
     </section>
+
+    {% include footer.html %}
 </section>

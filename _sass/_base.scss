@@ -28,6 +28,11 @@ hr.separator {
   background-image: linear-gradient(90deg, $complementary-blue, $main-blue);
 }
 
+.full {
+  width: 100%;
+  height: 100%;
+}
+
 #sidebar {
   text-align: center;
   padding: 2rem 1rem;
@@ -37,8 +42,13 @@ hr.separator {
   z-index: 1;
 
   a {
-    color: #fff;
+    color:rgba($color: #fff, $alpha: 0.75);
     font-weight: 600;
+    transition: 0.5s ease;
+  }
+
+  a:hover {
+    color:#fff;
   }
 
   .sidebar-sticky {
@@ -142,8 +152,53 @@ hr.separator {
   }
 }
 
+#resume-area {
+  @extend %content;
+
+  hr:not(.separator) {
+    height: 1px;
+    margin: 1.3em 0 0.65em;
+    background-color: rgba($color: $main-blue, $alpha: 0.25);
+  }
+}
+
 #projects-area {
   @extend %content;
+}
+
+.button {
+  font-family: "Montserrat",sans-serif;
+  width: $buttonWidth;
+  height: $buttonHeight !important;
+  margin: 15px auto 20px;
+  background-color: $main-blue !important;
+  color: rgba($color: #fff, $alpha: 0.85) !important;
+  transition: 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 6px 18px 0 rgba($color: #000, $alpha: 0.1);
+    transform: translateY(-6px);
+  }
+}
+
+footer {
+  @extend %content;
+  background-color: #fff;
+  padding: 2rem 1rem !important;
+
+  p {
+    font-size: 14px;
+    color: rgba($color: #000000, $alpha: 0.75);
+
+    svg {
+      color: red;
+    }
+  }
+
+  img {
+    filter:opacity(68%);
+    padding: 10px;
+  }
 }
 
 @media screen and (min-width: 38em) {
