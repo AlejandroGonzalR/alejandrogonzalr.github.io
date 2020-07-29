@@ -6,7 +6,7 @@
             }
           })
         .then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             appendProjects(response.data);
         })
         .catch(err => {
